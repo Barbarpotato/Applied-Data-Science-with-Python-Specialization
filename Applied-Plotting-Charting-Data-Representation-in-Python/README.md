@@ -1,0 +1,2 @@
+# Applied-Plotting-Charting-Data-Representation-in-Python
+<img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~G69WVJDQ3X7C/CERTIFICATE_LANDING_PAGE~G69WVJDQ3X7C.jpeg"></img>
