@@ -35,12 +35,17 @@ By achieving the best-fit regression line, the model aims to predict y value suc
 ### Regularization Technique
 Regularization is one of the most important concepts of machine learning. This technique prevents the model from overfitting by adding extra information to it. It is a form of regression that shrinks the coefficient estimates towards zero. In other words, this technique forces us not to learn a more complex or flexible model, to avoid the problem of overfitting.
 
-(1) Ridge Regression (L2 Normalization)
+(1) Ridge Regression (L2 Normalization)<br>
 <img src='https://miro.medium.com/max/1106/1*CiqZ8lhwxi5c4d1nV24w4g.png'>
 
-(2) Lasso Regression (L1 Normalization)
+(2) Lasso Regression (L1 Normalization)<br>
 <img src="https://miro.medium.com/max/1094/1*tHJ4sSPYV0bDr8xxEdiwXA.png">
 
 # Polynomial Regression
 It is also called the special case of Multiple Linear Regression in ML. Because we add some polynomial terms to the Multiple Linear regression equation to convert it into Polynomial Regression. It is a linear model with some modification in order to increase the accuracy.
 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNR4llv7l3PAZ2vAJrJWWytJ4S5SRJhkDqx52MTwjUiepuEMhxmrB_osny67DctdNmrdo&usqp=CAU'>
+
+# Logistic Regression
+Logistic regression predicts the output of a categorical dependent variable. Therefore the outcome must be a categorical or discrete value. It can be either Yes or No, 0 or 1, true or False, etc. but instead of giving the exact value as 0 and 1, it gives the probabilistic values which lie between 0 and 1. Logistic Regression is much similar to the Linear Regression except that how they are used. Linear Regression is used for solving Regression problems, whereas Logistic regression is used for solving the classification problems.
+<img src="https://www.saedsayad.com/images/LogReg_1.png">
+
