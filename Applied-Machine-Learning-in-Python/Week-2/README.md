@@ -72,6 +72,7 @@ These transformations are called kernels.
 Popular kernels are: Polynomial Kernel, Gaussian Kernel, Radial Basis Function (RBF), Laplace RBF Kernel, Sigmoid Kernel, Anove RBF Kernel, etc
 
 (1) Radial Basis Function Kernel Transformation
+<br>
 <img src='https://miro.medium.com/max/530/1*ZMCGXM4ROxEXlNe0SUlToA.jpeg'><br>
 where,<br>
 1. ‘σ’ is the variance and our hyperparameter
@@ -89,7 +90,7 @@ If the C is higher, the optimization will choose smaller margin hyperplane, so t
 <img src="https://miro.medium.com/max/828/0*rvt2H-wO55hKjJ5Y.png"><br>
 
 (2) Gamma
-The next important parameter is Gamma. The gamma parameter defines how far the influence of a single training example reaches. This means that high Gamma will consider only points close to the plausible hyperplane and low Gamma will consider points at greater distance.
+The next important parameter is Gamma. The gamma parameter defines how far the influence of a single training example reaches. This means that high Gamma will consider only points close to the plausible hyperplane and low Gamma will consider points at greater distance.<br>
 <img src="https://miro.medium.com/max/828/0*P5cqyr_n84SQDuAN.png"><br>
 
 (3) Margin
