@@ -54,8 +54,8 @@ A Support Vector Machine (SVM) performs classification by finding the hyperplane
 
 ### Linearly Separable Data
 Linearly Separable Data is any data that can be plotted in a graph and can be separated into classes using a straight line.
-<img src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png">
-
+<img width="150px" height="150px" src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png">
+<img width="150px" height="150px" src="https://miro.medium.com/max/640/1*B8zpyNKq0GT_RGQpXQMEVg.png">
 ### Non-Linearly Seperable Data
 
 
