@@ -53,8 +53,8 @@ Logistic regression predicts the output of a categorical dependent variable. The
 A Support Vector Machine (SVM) performs classification by finding the hyperplane that maximizes the margin between the two classes. The vectors (cases) that define the hyperplane are the support vectors.
 
 ### Linearly Separable Data
-Linearly Separable Data is any data that can be plotted in a graph and can be separated into classes using a straight line.
-<img width="150px" height="150px" src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png">
+Linearly Separable Data is any data that can be plotted in a graph and can be separated into classes using a straight line.<br>
+<img width="150px" height="150px" src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png"><br>
 <img width="150px" height="150px" src="https://miro.medium.com/max/640/1*B8zpyNKq0GT_RGQpXQMEVg.png">
 ### Non-Linearly Seperable Data
 
