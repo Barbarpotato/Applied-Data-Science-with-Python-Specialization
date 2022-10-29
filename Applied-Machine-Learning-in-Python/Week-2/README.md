@@ -49,14 +49,50 @@ It is also called the special case of Multiple Linear Regression in ML. Because 
 Logistic regression predicts the output of a categorical dependent variable. Therefore the outcome must be a categorical or discrete value. It can be either Yes or No, 0 or 1, true or False, etc. but instead of giving the exact value as 0 and 1, it gives the probabilistic values which lie between 0 and 1. Logistic Regression is much similar to the Linear Regression except that how they are used. Linear Regression is used for solving Regression problems, whereas Logistic regression is used for solving the classification problems.
 <img src="https://www.saedsayad.com/images/LogReg_1.png">
 
-# Support Vector Machine (Linearly Separable Data and Non-Linearly Separable Data)
+# Support Vector Machine (Linearly Separable Data and Non-Linearly Separable Data Transformation) and Tuning Parameters
 A Support Vector Machine (SVM) performs classification by finding the hyperplane that maximizes the margin between the two classes. The vectors (cases) that define the hyperplane are the support vectors.
 
 ### Linearly Separable Data
 Linearly Separable Data is any data that can be plotted in a graph and can be separated into classes using a straight line.<br>
-<img src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png"><br>
-<img src="https://miro.medium.com/max/640/1*B8zpyNKq0GT_RGQpXQMEVg.png">
-### Non-Linearly Seperable Data
+<img width='300px' height='250px' src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png"><br>
+<img width='300px' height='250px' src="https://miro.medium.com/max/640/1*B8zpyNKq0GT_RGQpXQMEVg.png">
 
+### Non-Linearly Seperable Data
+In this case we cannot find a straight line to separate<br>
+<img src="https://i.stack.imgur.com/y5uMX.png"><br>
+<br>
+The basic idea is that when a data set is inseparable in the current dimensions, add another dimension, maybe that way the data will be separable. Just think about it, the example above is in 2D and it is inseparable, but maybe in 3D there is a gap between them, maybe there is a level difference. In this case, we can easily draw a separating hyperplane (in 3D a hyperplane is a plane) between level 1 and 2.
+
+Let's assume that we have 2 Dimensional data, but its not separable, so we add another dimension called X3. Another important transformation is that in the new dimension the points are organized using this formula x1² + x2².
+
+If we plot the plane defined by the x² + y² formula, we will get something like this:
+<img src="https://i.stack.imgur.com/oiZYz.jpg"><br>
+
+These transformations are called kernels.
+Popular kernels are: Polynomial Kernel, Gaussian Kernel, Radial Basis Function (RBF), Laplace RBF Kernel, Sigmoid Kernel, Anove RBF Kernel, etc
+
+(1) Radial Basis Function Kernel Transformation
+<img src='https://miro.medium.com/max/530/1*ZMCGXM4ROxEXlNe0SUlToA.jpeg'><br>
+where,<br>
+1. ‘σ’ is the variance and our hyperparameter
+2. ||X₁ - X₂|| is the Euclidean (L₂-norm) Distance between two points X₁ and X₂
+
+(2) Polynomial Kernel
+<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/c7bc5dc859db1eb2debb5e1521c954ca2829c9a7'>
+where x and y are vectors in the input space, i.e. vectors of features computed from training or test samples and c ≥ 0 is a free parameter trading off the influence of higher-order versus lower-order terms in the polynomial. When c = 0, the kernel is called homogeneous. (A further generalized polykernel divides xTy by a user-specified scalar parameter a.)
+
+### Tuning Parameters.
+(1) Regularization
+The Regularization Parameter (in python it’s called C) tells the SVM optimization how much you want to avoid miss classifying each training example.
+
+If the C is higher, the optimization will choose smaller margin hyperplane, so training data miss classification rate will be lower.
+<img src="https://miro.medium.com/max/828/0*rvt2H-wO55hKjJ5Y.png"><br>
+
+(2) Gamma
+The next important parameter is Gamma. The gamma parameter defines how far the influence of a single training example reaches. This means that high Gamma will consider only points close to the plausible hyperplane and low Gamma will consider points at greater distance.
+<img src="https://miro.medium.com/max/828/0*P5cqyr_n84SQDuAN.png"><br>
+
+(3) Margin
+The last parameter is the margin. We’ve already talked about margin, higher margin results better model, so better classification (or prediction). The margin should be always maximized.
 
 
