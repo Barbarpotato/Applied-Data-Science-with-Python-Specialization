@@ -78,22 +78,22 @@ where,<br>
 1. ‘σ’ is the variance and our hyperparameter
 2. ||X₁ - X₂|| is the Euclidean (L₂-norm) Distance between two points X₁ and X₂
 
-(2) Polynomial Kernel
+(2) Polynomial Kernel<br>
 <img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/c7bc5dc859db1eb2debb5e1521c954ca2829c9a7'>
 where x and y are vectors in the input space, i.e. vectors of features computed from training or test samples and c ≥ 0 is a free parameter trading off the influence of higher-order versus lower-order terms in the polynomial. When c = 0, the kernel is called homogeneous. (A further generalized polykernel divides xTy by a user-specified scalar parameter a.)
 
 ### Tuning Parameters.
-(1) Regularization
+(1) Regularization<br>
 The Regularization Parameter (in python it’s called C) tells the SVM optimization how much you want to avoid miss classifying each training example.
 
 If the C is higher, the optimization will choose smaller margin hyperplane, so training data miss classification rate will be lower.
 <img src="https://miro.medium.com/max/828/0*rvt2H-wO55hKjJ5Y.png"><br>
 
-(2) Gamma
+(2) Gamma<br>
 The next important parameter is Gamma. The gamma parameter defines how far the influence of a single training example reaches. This means that high Gamma will consider only points close to the plausible hyperplane and low Gamma will consider points at greater distance.<br>
 <img src="https://miro.medium.com/max/828/0*P5cqyr_n84SQDuAN.png"><br>
 
-(3) Margin
+(3) Margin<br>
 The last parameter is the margin. We’ve already talked about margin, higher margin results better model, so better classification (or prediction). The margin should be always maximized.
 
 
