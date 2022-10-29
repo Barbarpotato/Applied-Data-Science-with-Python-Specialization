@@ -81,7 +81,7 @@ where,<br>
 2. ||X₁ - X₂|| is the Euclidean (L₂-norm) Distance between two points X₁ and X₂
 
 (2) Polynomial Kernel<br>
-<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/c7bc5dc859db1eb2debb5e1521c954ca2829c9a7'>
+K(x, y) = (x^T.y + c)^d<br>
 where x and y are vectors in the input space, i.e. vectors of features computed from training or test samples and c ≥ 0 is a free parameter trading off the influence of higher-order versus lower-order terms in the polynomial. When c = 0, the kernel is called homogeneous. (A further generalized polykernel divides xTy by a user-specified scalar parameter a.)
 
 ### Tuning Parameters.
