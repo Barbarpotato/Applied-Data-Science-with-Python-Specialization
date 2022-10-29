@@ -49,3 +49,14 @@ It is also called the special case of Multiple Linear Regression in ML. Because 
 Logistic regression predicts the output of a categorical dependent variable. Therefore the outcome must be a categorical or discrete value. It can be either Yes or No, 0 or 1, true or False, etc. but instead of giving the exact value as 0 and 1, it gives the probabilistic values which lie between 0 and 1. Logistic Regression is much similar to the Linear Regression except that how they are used. Linear Regression is used for solving Regression problems, whereas Logistic regression is used for solving the classification problems.
 <img src="https://www.saedsayad.com/images/LogReg_1.png">
 
+# Support Vector Machine (Linearly Separable Data and Non-Linearly Separable Data)
+A Support Vector Machine (SVM) performs classification by finding the hyperplane that maximizes the margin between the two classes. The vectors (cases) that define the hyperplane are the support vectors.
+
+### Linearly Separable Data
+Linearly Separable Data is any data that can be plotted in a graph and can be separated into classes using a straight line.
+<img src="https://miro.medium.com/max/640/1*v0OUUim9Ur14Qsb904cMDQ.png">
+
+### Non-Linearly Seperable Data
+
+
+
