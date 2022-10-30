@@ -116,4 +116,4 @@ In the leave-one-out (LOO) cross-validation, we train our machine-learning model
 
 <img src='https://www.baeldung.com/wp-content/uploads/sites/4/2022/05/loso.png'><br>
 The final performance estimate is the average of the six individual scores:<br>
-<img src='https://www.baeldung.com/wp-content/ql-cache/quicklatex.com-01d42c626feb31650e5d6f5a65b5d7fe_l3.svg'>
+<h5>Overall Score = (Score1+ Score2 + Score3 + Score4 + Score5 + Score6) / 6</h5>
