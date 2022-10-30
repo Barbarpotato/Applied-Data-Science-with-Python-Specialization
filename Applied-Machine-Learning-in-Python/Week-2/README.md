@@ -98,4 +98,22 @@ The next important parameter is Gamma. The gamma parameter defines how far the i
 (3) Margin<br>
 The last parameter is the margin. We’ve already talked about margin, higher margin results better model, so better classification (or prediction). The margin should be always maximized.
 
+# Cross Validation
+### K-Fold Cross Validation
+K-fold Cross-Validation is when the dataset is split into a K number of folds and is used to evaluate the model's ability when given new data. K refers to the number of groups the data sample is split into. For example, if you see that the k-value is 5, we can call this a 5-fold cross-validation.
+<img src='https://cdn-images-1.medium.com/max/1009/1*1RPHQk-xpKMInxkEd1qFyg.png'>
 
+### Stratified Cross Validation
+Example Explanation:
+Let’s consider a binary-class classification problem. Let our dataset consists of 100 samples out of which 80 are negative class { 0 } and 20 are positive class { 1 }.
+
+If we do random sampling to split the dataset into training_set and test_set in an 8:2 ratio respectively.Then we might get all negative class {0} in training_set i.e 80 samples in training_test and all 20 positive class {1} in test_set.Now if we train our model on training_set and test our model on test_set, Then obviously we will get a bad accuracy score.
+
+In stratified sampling, The training_set consists of 64 negative class{0} ( 80% 0f 80 ) and 16 positive class {1} ( 80% of 20 ) i.e. 64{0}+16{1}=80 samples in training_set which represents the original dataset in equal proportion and similarly test_set consists of 16 negative class {0} ( 20% of 80 ) and 4 positive class{1} ( 20% of 20 ) i.e. 16{0}+4{1}=20 samples in test_set which also represents the entire dataset in equal proportion.This type of train-test-split results in good accuracy.
+
+### Leave-One-Out Cross Validation
+In the leave-one-out (LOO) cross-validation, we train our machine-learning model n times where n is to our dataset’s size. Each time, only one sample is used as a test set while the rest are used to train our model.
+
+<img src='https://www.baeldung.com/wp-content/uploads/sites/4/2022/05/loso.png'><br>
+The final performance estimate is the average of the six individual scores:<br>
+<img src='https://www.baeldung.com/wp-content/ql-cache/quicklatex.com-01d42c626feb31650e5d6f5a65b5d7fe_l3.svg'>
