@@ -139,7 +139,7 @@ For the other four attributes, we need to calculate the entropy after each of th
 <li>(PlayGolf,Windy)</li>
 </ul>
 Example of (PlayGolf, Outlook):<br>
-<img src='https://2.bp.blogspot.com/-imdc1oWPMe8/WtUj2JtJNzI/AAAAAAAABxs/ch4jn3jU-2UrzM7vgoWOVihVBEhyPsSuQCLcBGAs/s400/Decistion%2BTree%2B-%2BEntropy%2Bof%2BTwo%2BVariables4.jpg'>
+<img src='https://4.bp.blogspot.com/-R2Y6cMoCA2I/WtUh53NPSxI/AAAAAAAABxY/zxCy_7Iz8gI3ha0sthZt_7nvgat42G2-ACLcBGAs/s320/Decistion%2BTree%2B-%2BEntropy%2Bof%2BTwo%2BVariables3.jpg'>
 <p>Using this table, we can then calculate E(PlayGolf, Outlook), which would then be given by the formula below</p>
 <img src='https://2.bp.blogspot.com/-imdc1oWPMe8/WtUj2JtJNzI/AAAAAAAABxs/ch4jn3jU-2UrzM7vgoWOVihVBEhyPsSuQCLcBGAs/s400/Decistion%2BTree%2B-%2BEntropy%2Bof%2BTwo%2BVariables4.jpg'><br>
 Let’s go ahead to calculate E(3,2)
