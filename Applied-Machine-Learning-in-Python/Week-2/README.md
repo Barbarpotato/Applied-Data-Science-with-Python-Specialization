@@ -117,3 +117,70 @@ In the leave-one-out (LOO) cross-validation, we train our machine-learning model
 <img src='https://www.baeldung.com/wp-content/uploads/sites/4/2022/05/loso.png'><br>
 The final performance estimate is the average of the six individual scores:<br>
 <h5>Overall Score = (Score1+ Score2 + Score3 + Score4 + Score5 + Score6) / 6</h5>
+
+# Decision Tree
+A decision tree is a tree-like structure that is used as a model for classifying data. A decision tree decomposes the data into sub-trees made of other sub-trees and/or leaf nodes.
+Step By Step:<br>
+<img src='https://2.bp.blogspot.com/-sD_VfJzi8YY/WtTygMEGRCI/AAAAAAAABwA/mnnX-Q14j3kRoFzbygUrhgDS_DQwSemZQCLcBGAs/s640/Decision%2BTree%2BExercise.jpg'><br>
+
+### Determine The Decision Column
+We Can calculate how many data in some class.<br>
+<img src='https://3.bp.blogspot.com/-sr5Xk0iBLZM/WtUToEVlKSI/AAAAAAAABwQ/914mIDeieOUpVG38pYwx3Q1uVkOBYYXRwCLcBGAs/s200/Decistion%2BTree%2B-%2BFrequency%2BTable%2B-%2BPlay%2BGolf.jpg'><br>
+
+### Calculating the Entropy for the classes
+<img src='https://2.bp.blogspot.com/-nCz0cZ8jYMQ/WtUWR1NJXdI/AAAAAAAABww/qdjyvECbSr4IiBSpYCevuznnKcNNjHmSgCLcBGAs/s400/Decistion%2BTree%2B-%2BEntropy%2BCalculation.jpg'><br>
+
+### Calculating Entropy for other attributes
+For the other four attributes, we need to calculate the entropy after each of the split.<br>
+<ul>
+<li>(PlayGolf, Outloook)</li>
+<li>(PlayGolf, Temperature)</li>
+<li>(PlayGolf, Humidity)</li>
+<li>(PlayGolf,Windy)</li>
+</ul>
+Example of (PlayGolf, Outlook):<br>
+<img src='https://2.bp.blogspot.com/-imdc1oWPMe8/WtUj2JtJNzI/AAAAAAAABxs/ch4jn3jU-2UrzM7vgoWOVihVBEhyPsSuQCLcBGAs/s400/Decistion%2BTree%2B-%2BEntropy%2Bof%2BTwo%2BVariables4.jpg'>
+<p>Using this table, we can then calculate E(PlayGolf, Outlook), which would then be given by the formula below</p>
+<img src='https://2.bp.blogspot.com/-imdc1oWPMe8/WtUj2JtJNzI/AAAAAAAABxs/ch4jn3jU-2UrzM7vgoWOVihVBEhyPsSuQCLcBGAs/s400/Decistion%2BTree%2B-%2BEntropy%2Bof%2BTwo%2BVariables4.jpg'><br>
+Let’s go ahead to calculate E(3,2)
+We would not need to calculate the second and the third terms! This is because
+E(4, 0) = 0
+E(2,3) = E(3,2)<br>
+<img src='https://2.bp.blogspot.com/-HsYFjNR0xdI/WtUma2vNVHI/AAAAAAAABx4/IV0N_y8VlvodugKhxTyaCIatgYVxdRNrQCLcBGAs/s400/Decistion%2BTree%2B-%2BEntropy%2Bof%2BTwo%2BVariables5.jpg'><br>
+and the result of E(PlayGolf, Outloook) is:
+<br>
+<img src='https://4.bp.blogspot.com/-DK4jUKpsE5A/WtZVqiOqUFI/AAAAAAAAByc/KaXYSR50STUYeQ8fwGDiExQEs7CY59PagCLcBGAs/s400/Calculating%2BP%2528PlayGolf%252C%2BOutlook%2529.jpg'><br>
+After Calculating all attributes, we have:<br>
+<ol>
+<li>E(PlayGolf, Outloook) = 0.693</li>
+<li>E(PlayGolf, Temperature) = 0.911</li>
+<li>E(PlayGolf, Humidity) = 0.788</li>
+<li>E(PlayGolf,Windy) = 0.892</li>
+</ol>
+
+### Calculating Information Gain for Each Split
+The next step is to calculate the information gain for each of the attributes. The information gain is calculated from the split using each of the attributes. Then the attribute with the largest information gain is used for the split.
+The information gain is calculated using the formula:
+<h3>Information Gain: Entropy class - Entropy Attributes.</h3>
+<br>
+So let’s go ahead to do the calculation:
+
+Gain(PlayGolf, Outlook) = Entropy(PlayGolf) – Entropy(PlayGolf, Outlook)
+= 0.94 – 0.693 = 0.247
+
+Gain(PlayGolf, Temperature) = Entropy(PlayGolf) – Entropy(PlayGolf, Temparature)
+= 0.94 – 0.911 = 0.029
+
+Gain(PlayGolf, Humidity) = Entropy(PlayGolf) – Entropy(PlayGolf, Humidity)
+= 0.94 – 0.788 = 0.152
+
+Gain(PlayGolf, Windy) = Entropy(PlayGolf) – Entropy(PlayGolf, Windy)
+= 0.94 – 0.892 = 0.048
+
+### Perform the First Split
+Now that we have all the information gain, we then split the tree based on the attribute with the highest information gain.
+
+### Controlling the Model Complexity of Decision Tree
+<img src='https://4.bp.blogspot.com/-pPu1zJ4iKgk/XdYjR_9C_jI/AAAAAAAAA98/-YCd2tTxGlIfApkrlmmatwIo-eVVgnrIwCLcBGAsYHQ/s1600/neuralnetworklayersbeforeandafterpruning.png'>
+<p>This technique is used after construction of decision tree. This technique is used when decision tree will have very large depth and will show overfitting of model. We can make it to be a simple form by using post-pruning technique.</p>
+
