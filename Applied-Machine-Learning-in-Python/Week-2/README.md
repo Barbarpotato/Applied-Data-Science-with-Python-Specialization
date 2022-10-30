@@ -161,7 +161,7 @@ After Calculating all attributes, we have:<br>
 ### Calculating Information Gain for Each Split
 The next step is to calculate the information gain for each of the attributes. The information gain is calculated from the split using each of the attributes. Then the attribute with the largest information gain is used for the split.
 The information gain is calculated using the formula:<br>
-<strong>Information Gain: Entropy class - Entropy Attributes</strong>
+<br><strong>Information Gain: Entropy class - Entropy Attributes</strong>
 <br>
 So let’s go ahead to do the calculation:<br>
 
