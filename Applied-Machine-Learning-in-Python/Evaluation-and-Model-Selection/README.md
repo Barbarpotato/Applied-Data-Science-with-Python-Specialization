@@ -76,3 +76,29 @@ Using Precision-Recall curve for various Decision Threshold values, we can selec
 2. ROC (Reveicer Operating Characteristic) Curves<br>
 ROC curve is a graph that shows the performance of a classification model at all possible thresholds( threshold is a particular value beyond which you say a point belongs to a particular class). The curve is plotted between two parameters: TRUE POSITIVE RATE and FALSE POSITIVE RATE<br>
 <img width='800px' height='700px'  src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/roc-curves.png'>
+
+# Multi-Class Evaluation
+Multi class evaluation is an extension of the binary case.
+- A collection of true vs predicted bunary outcomes, one per class.
+- Confusion matrices are especially useful.
+- Classification report (scikit-learn library that computes recall, precision, f1, etc)
+
+### Multi-class Confusion Matrix
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/confusion-matrix-multi-class.png'>
+
+### Macro vs Micro Average
+1. Macro Average
+<img src= 'https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/macro.png'>
+
+2. Micro Average
+<img src= 'https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/micro.png'>
+
+If the classes have about the same number of instances, macro and micro average will be about the same.<br>
+If some classes are much larger (more instances) than others, and you want to:<br>
+- Weigth your metric toward the largest ones, using micro-average.
+- Weight your metric toward the smallest ones, using macro-average.
+If the micro avg < macro avg, then examine the larger classes for poor metric performance.<br>
+If micro avg > macro avg, then examine the smaller classes for poor metric performance.
+
+
+
