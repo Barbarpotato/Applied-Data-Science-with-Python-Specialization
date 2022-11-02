@@ -74,5 +74,5 @@ Using Precision-Recall curve for various Decision Threshold values, we can selec
 <img width='800px' height='700px' src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/precision-recall-curves.png'><br>
 
 2. ROC (Reveicer Operating Characteristic) Curves<br>
-ROC curve is a graph that shows the performance of a classification model at all possible thresholds( threshold is a particular value beyond which you say a point belongs to a particular class). The curve is plotted between two parameters: TRUE POSITIVE RATE and FALSE POSITIVE RATE.
+ROC curve is a graph that shows the performance of a classification model at all possible thresholds( threshold is a particular value beyond which you say a point belongs to a particular class). The curve is plotted between two parameters: TRUE POSITIVE RATE and FALSE POSITIVE RATE<br>
 <img width='800px' height='700px'  src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/roc-curves.png'>

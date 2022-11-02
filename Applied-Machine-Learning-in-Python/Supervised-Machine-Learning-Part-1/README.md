@@ -17,23 +17,6 @@ Important for some machine learning methods that all features are on the same sc
 ### Linear Regression
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/linear-regression-plot.jpg">
 Linear regression performs the task to predict a dependent variable value (y) based on a given independent variable (x). So, this regression technique finds out a linear relationship between x (input) and y(output). Hence, the name is Linear Regression. In the figure above, X (input) is the work experience and Y (output) is the salary of a person. The regression line is the best fit line for our model.
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/linear-regression-hypothesis.jpg">
-While training the model we are given :
-x: input training data (univariate – one input variable(parameter))
-y: labels to data (supervised learning)
-
-When training the model – it fits the best line to predict the value of y for a given value of x. The model gets the best regression fit line by finding the best θ1 and θ2 values.
-θ1: intercept
-θ2: coefficient of x
-
-Once we find the best θ1 and θ2 values, we get the best fit line. So when we are finally using our model for prediction, it will predict the value of y for the input value of x.
-
-How to update θ1 and θ2 values to get the best fit line ?
-
-Cost Function (J):
-By achieving the best-fit regression line, the model aims to predict y value such that the error difference between predicted value and true value is minimum. So, it is very important to update the θ1 and θ2 values, to reach the best value that minimize the error between predicted y value (pred) and true y value (y).
-
-<img src='https://media.geeksforgeeks.org/wp-content/uploads/LR-cost-function-1.jpg'>
 
 ### Regularization Technique
 Regularization is one of the most important concepts of machine learning. This technique prevents the model from overfitting by adding extra information to it. It is a form of regression that shrinks the coefficient estimates towards zero. In other words, this technique forces us not to learn a more complex or flexible model, to avoid the problem of overfitting.
