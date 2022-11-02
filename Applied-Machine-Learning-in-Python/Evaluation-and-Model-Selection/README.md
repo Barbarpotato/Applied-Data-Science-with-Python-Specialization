@@ -44,7 +44,7 @@ what fraction of positive predictions are correct?
 <p><strong>True Positive / True Positives + False Positive</strong></p>
 
 ### There is often a tradeoff between precision and recall
-Low Precision, High Recall
+Low Precision, High Recall<br>
 High Precision, Low Recall
 
 Recall-Oriented machine learning tasks:
@@ -61,3 +61,14 @@ Precision-Oriented machine learning tasks:
 Combining precision and recall into a single number.
 where, 
 F1 = 2*TP / (2*TP+FN+FP)
+
+# Classifier Decision Function
+This method basically returns a Numpy array, In which each element represents whether a predicted sample for x_test by the classifier lies to the right or left side of the Hyperplane and also how far from the HyperPlane. It also tells us that how confidently each value predicted for x_test by the classifier is Positive ( large-magnitude Positive value ) or Negative ( large-magnitude Negative value)
+
+### Decision Threshold
+sklearn does not let us set the decision threshold directly, but it gives us the access to decision scores ( Decision function o/p ) that is used to make the prediction. We can select the best score from decision function output and set it as Decision Threshold value and consider all those Decision score values which are less than this Decision Threshold as a negative class ( 0 ) and all those decision score values that are greater than this Decision Threshold value as a positive class ( 1 ).
+1. Precision-Recall Curves
+Using Precision-Recall curve for various Decision Threshold values, we can select the best value for Decision Threshold such that it gives High Precision ( Without affection Recall much ) or High Recall ( Without affecting Precision much ) based on whether our project is precision-oriented or recall-oriented respectively.
+2. ROC (Reveicer Operating Characteristic) Curves
+ROC curve is a graph that shows the performance of a classification model at all possible thresholds( threshold is a particular value beyond which you say a point belongs to a particular class). The curve is plotted between two parameters: TRUE POSITIVE RATE and FALSE POSITIVE RATE.
+
