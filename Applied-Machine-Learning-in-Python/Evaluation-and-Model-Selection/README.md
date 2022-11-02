@@ -95,7 +95,7 @@ Multi class evaluation is an extension of the binary case.
 
 If the classes have about the same number of instances, macro and micro average will be about the same.<br>
 If the micro avg < macro avg, then examine the larger classes for poor metric performance.<br>
-If micro avg > macro avg, then examine the smaller classes for poor metric performance.
+If micro avg > macro avg, then examine the smaller classes for poor metric performance.<br>
 If some classes are much larger (more instances) than others, and you want to:<br>
 - Weigth your metric toward the largest ones, using micro-average.
 - Weight your metric toward the smallest ones, using macro-average.<br>
