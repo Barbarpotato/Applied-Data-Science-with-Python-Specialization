@@ -101,21 +101,23 @@ If some classes are much larger (more instances) than others, and you want to:<b
 - Weight your metric toward the smallest ones, using macro-average.<br>
 
 # Regression Evaluation
-We cannot calculate accuracy for a regression model. The skill or performance of a regression model must be reported as an error in those predictions. Error addresses exactly this and summarizes on average how close predictions were to their expected values. There are error metrics that are commonly used for evaluating and reporting the performance of a regression model. They are:
+We cannot calculate accuracy for a regression model. The skill or performance of a regression model must be reported as an error in those predictions. Error addresses exactly this and summarizes on average how close predictions were to their expected values. There are error metrics that are commonly used for evaluating and reporting the performance of a regression model. They are:<br>
 1. Mean Absolute Error (MAE).<br>
 In machine learning terms, this corresponds to the expected value of L1 norm loss. This is sometime used for example to asses forecast outcomes for the regression in time series analysis.<br>
 <img width='600px' height='350px' src='https://gisgeography.com/wp-content/uploads/2014/08/mae-formula.png'>
 <br>
+
 2. Mean Squared Error (MSE)<br>
 This evaluation corresponds to the expected value of L2 norm loss. this is widely used for the regression problems.<br>
 <img width='600px' height='350px' src='https://cdn-media-1.freecodecamp.org/images/hmZydSW9YegiMVPWq2JBpOpai3CejzQpGkNG'><br>
 
 3. Root Mean Squared Error (RMSE)<br>
-
 <img width='600px' height='350px' src='https://i.stack.imgur.com/eG03B.png'><br>
 
 4. R^2 Score<br>
-<img width='600px' height='350px' src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/r2_scores.png'><br>
+<img width='600px' height='350px' src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/r2_scores.png'>
+
+
 
 
 
