@@ -10,17 +10,17 @@ We can use sanity check on our classifier perfomance for imbalanced datasets pro
 ### Dummy Classifiers
 This classifier will provide a null metric(e.g null accuracy) baseline. that means the accuracy can be achieved by always picking the most frequent class. this classifiers doesnt use for real problems. this classifiers is useed to check the sanity on our real classifiers performance.
 Some commonly-used settings for the strategy parameter for DummyClassifier in Scikit-learn:
--most_frequent: predict the most frequent label in the training set.
--stratified: random predictions based on training set class distributions.
--uniform: generates predictions uniformly at random. all class have an equally chances at being output.
--constant: always predict a constant label provided by a user.
+- most_frequent: predict the most frequent label in the training set.
+- stratified: random predictions based on training set class distributions.
+- uniform: generates predictions uniformly at random. all class have an equally chances at being output.
+- constant: always predict a constant label provided by a user.
 ### Dummy Regressors
 This is used for the regression problem
 strategy parameter options:
--mean: predicts the mean of the training targets
--median: predicts the median of the training targets.
--quantile: predicts a user-provided quantile of the training targets
--constant: predicts a constant user-provided value.
+- mean: predicts the mean of the training targets
+- median: predicts the median of the training targets.
+- quantile: predicts a user-provided quantile of the training targets
+- constant: predicts a constant user-provided value.
 
 # Confusion Matrices & Basic Evaluation Metrics
 A confusion matrix of binary classification is a two by two table formed by counting of the number of the four outcomes of a binary classifier. We usually denote them as TP, FP, TN, and FN instead of “the number of true positives”, and so on.
@@ -99,6 +99,25 @@ If micro avg > macro avg, then examine the smaller classes for poor metric perfo
 If some classes are much larger (more instances) than others, and you want to:<br>
 - Weigth your metric toward the largest ones, using micro-average.
 - Weight your metric toward the smallest ones, using macro-average.<br>
+
+# Regression Evaluation
+We cannot calculate accuracy for a regression model. The skill or performance of a regression model must be reported as an error in those predictions. Error addresses exactly this and summarizes on average how close predictions were to their expected values. There are error metrics that are commonly used for evaluating and reporting the performance of a regression model. They are:
+1. Mean Absolute Error (MAE).<br>
+In machine learning terms, this corresponds to the expected value of L1 norm loss. This is sometime used for example to asses forecast outcomes for the regression in time series analysis.<br>
+<img width='600px' height='350px' src='https://gisgeography.com/wp-content/uploads/2014/08/mae-formula.png'>
+<br>
+2. Mean Squared Error (MSE)<br>
+This evaluation corresponds to the expected value of L2 norm loss. this is widely used for the regression problems.<br>
+<img width='600px' height='350px' src='https://cdn-media-1.freecodecamp.org/images/hmZydSW9YegiMVPWq2JBpOpai3CejzQpGkNG'><br>
+
+3. Root Mean Squared Error (RMSE)<br>
+
+<img width='600px' height='350px' src='https://i.stack.imgur.com/eG03B.png'><br>
+
+4. R^2 Score<br>
+<img width='600px' height='350px' src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Evaluation-and-Model-Selection/Images/r2_scores.png'><br>
+
+
 
 
 
