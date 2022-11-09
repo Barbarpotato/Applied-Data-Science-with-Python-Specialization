@@ -7,7 +7,7 @@ These classifiers are called 'Naive' because they assume that features are condi
 2. Multinomial: discrete features (e.g. word counts)
 3. Gaussian: continuous/real-valued features
 
-### Gaussian Navie Bayes
+### Gaussian Naive Bayes
 How it Works:<br>
 <img src='https://2.bp.blogspot.com/-sD_VfJzi8YY/WtTygMEGRCI/AAAAAAAABwA/mnnX-Q14j3kRoFzbygUrhgDS_DQwSemZQCLcBGAs/s640/Decision%2BTree%2BExercise.jpg'><br>
 The dataset is divided into two parts, feature matrix and the response vector.
@@ -15,23 +15,20 @@ The dataset is divided into two parts, feature matrix and the response vector.
 - Response vector contains the value of class variable(prediction or output) for each row of feature matrix. In above dataset, the class variable name is ‘Play golf’.<br>
 
 <img src='https://media.geeksforgeeks.org/wp-content/uploads/naive-bayes-classification.png'><br>
-So, in the figure above, we have calculated P(xi | yj) for each xi in X and yj in y manually in the data tables or example, probability of playing golf given that the temperature is cool, i.e P(temp. = cool | play golf = Yes) = 3/9.
+So, in the figure above, we have calculated P(xi | yj) for each xi in X and yj in y manually in the data tables or example, probability of playing golf given that the temperature is cool, i.e P(temp. = cool | play golf = Yes) = 3/9. Also, we need to find class probabilities (P(y)) which has been calculated in the table 5. For example, P(play golf = Yes) = 9/14.
 
-Also, we need to find class probabilities (P(y)) which has been calculated in the table 5. For example, P(play golf = Yes) = 9/14.
-
-So now, we are done with our pre-computations and the classifier is ready!
-
-Let us test it on a new set of features (let us call it today):
+So now, we are done with our pre-computations and the classifier is ready! Let us test it on a new set of features (let us call it today):<br>
 today = (Sunny, Hot, Normal, False)
 
-So, probability of playing golf is given by:
-<img src='https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-c6067bf0bf53532b6701c72215bc0758_l3.svg'>
-<img src='https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-e061a86d4158d65787e64c4cdfd15f17_l3.svg'>
-and probability to not play golf is given by:
-<img src='https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-ed23967bcb3871bd6919752aa396a167_l3.svg'>
-<img src='https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-176cc113842cb9f7bf3e645e10381bec_l3.svg'><br>
+Probability of playing golf is given by:
+2/9 * 2/9 * 6/9 * 6/9 * 9/14 = 0.0141<br>
+Probability of not playing golf given by:
+3/5 * 2/5 * 1/5 * 2/5 * 5/14 = 0.0068<br>
 
 These numbers can be converted into a probability by making the sum equal to 1 (normalization):
-<img src='https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-d743d4c0f318303820d38a8b533d07d8_l3.svg'>
-<img src='https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-1c3af0ce1707cd819282d764d8b71f63_l3.svg'>
+P(YES | today ) = 0.00141 / (0.0141 + 0.0068) = 0.67
+P(NO | today) = 0.0068 / (0.0068 + 0.0141) = 0.33
+
+
+
 
