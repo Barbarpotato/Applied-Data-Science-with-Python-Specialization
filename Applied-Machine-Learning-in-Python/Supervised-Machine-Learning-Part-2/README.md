@@ -31,20 +31,20 @@ P(NO | today) = 0.0068 / (0.0068 + 0.0141) = 0.33
 ### Gaussian Naive Bayes
 This Dataset is used for the example of how gaussian naive bayers works, contain 7 data from cancer class
 and 7 data from healthy class, with 1 feature is PSA.
-<img src=''><br>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/data-gaussian.png'><br>
 
 for the Gaussian Concept, we need to calculate the mean of some feature in class, and its standart deviation.
 for cancer we got std=0.82 and the mean=2.8, for healthy class we got std=0.61 and mean=1.5<br>
-<img src=''><br>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/mean-std-gaussian.png'><br>
 
 After we got the std and the mean of each class, we can calculate the f(x) of PSA feature that we want to predict. for this example we use PSA = 2.6<br>
-<img src=''><br>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/calculate-gaussian.png'><br>
 
 Do not forget to calculate the probability of cancer and healthy in the dataset. in this case we have 7 cancer and 7 healthy dataset which made the p(Cancer) and the p(Healthy) are 0.5<br>
-<img src=''><br>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/proba-gaussian.png'><br>
 
 then count the probability where the PSA = 2.6, in this case we got 79% chance diagnosed as Cancer and its about 21% chance healthy when the PSA = 2.6<br>
-<img src=''><br>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/proba2-gaussian.png'><br>
 
 
 
