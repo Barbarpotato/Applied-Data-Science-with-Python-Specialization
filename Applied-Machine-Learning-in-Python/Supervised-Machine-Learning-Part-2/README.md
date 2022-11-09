@@ -55,11 +55,11 @@ Decision Tree are highly sensitive to the training data which could result in hi
 in this case, the data will get randomed select from the original dataset. Every dataset will contain the same number of rows as the original one. Not just randomly picked the dataset, we'll randomly select the subset of features as well for each tree and use it for training. in this example we will use 4 random sampling. The Process when we created the new dataset are:
 - 'Bootstrapping'. Bootstraping ensures that we are not using the same data for every tree, so it helps our model to be less sensitive to the original dataset.
 - 'Random feature selection'. helps to reduce the correlation between the trees.if we use every feautre then most of our trees will have the same decision nodes and they will act very similiarly.
-<img src=''>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/randomforest-data-split.png'>
 
 2. creating the decision tree each of the new dataset.
 in this case we have 4 new dataset that generated using the Bootstrapping method. and each of the dataset contain different features. Create the decision tree each of this dataset and the result will look like this:<br>
-<img src=''>
+<img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/dec-tree-randomforest.png'>
 
 3. Predicting some values.
 after we build each of the decision tree, lets take a test data for our model. In this case we are gonna use 2.8, 6.2, 4.3, 5.3, 5.5. this data will be tested in 4 different decision tree models and generated the output between one and zero (binary classification problem) which: 1, 0, 1, 1. From this output we will take the majority vote which is predicted as 1. The process of combining result between different decision tree models is called 'aggregation'. 
