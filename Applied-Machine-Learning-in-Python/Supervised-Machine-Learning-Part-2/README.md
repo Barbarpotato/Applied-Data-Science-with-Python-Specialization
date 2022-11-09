@@ -29,8 +29,8 @@ P(YES | today ) = 0.00141 / (0.0141 + 0.0068) = 0.67
 P(NO | today) = 0.0068 / (0.0068 + 0.0141) = 0.33
 
 ### Gaussian Naive Bayes
-This Dataset is used for the example of how gaussian naive bayers works, contain 7 data from cancer class
-and 7 data from healthy class, with 1 feature is PSA.
+This Dataset is used for the example of how gaussian naive bayes works, contain 7 data from cancer class
+and 7 data from healthy class, with 1 feature is PSA.<br>
 <img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/data-gaussian.png'><br>
 
 for the Gaussian Concept, we need to calculate the mean of some feature in class, and its standart deviation.
@@ -46,5 +46,20 @@ Do not forget to calculate the probability of cancer and healthy in the dataset.
 then count the probability where the PSA = 2.6, in this case we got 79% chance diagnosed as Cancer and its about 21% chance healthy when the PSA = 2.6<br>
 <img src='https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/proba2-gaussian.png'><br>
 
+# Ensamble Learning 
+In statistics and machine learning, ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. Ensembles combine multiple hypotheses to form a (hopefully) better hypothesis. The term ensemble is usually reserved for methods that generate multiple hypotheses using the same base learner. The broader term of multiple classifier systems also covers hybridization of hypotheses that are not induced by the same base learner.
 
+### Random Forest
+Decision Tree are highly sensitive to the training data which could result in high variance. So Our Model might failed to generalize, so here comes the Random Forest algorithm. Random forests or random decision forests is an ensemble learning method for classification, regression and other tasks. It is a collection of multiple random decision trees and its much less sensitive to the training data. The Step of Random FOrest Algrithm:
+1. build the datasets from the original data.
+in this case, the data will get randomed select from the original dataset. Every dataset will contain the same number of rows as the original one. Not just randomly picked the dataset, we'll randomly select the subset of features as well for each tree and use it for training. in this example we will use 4 random sampling. The Process when we created the new dataset are:
+- 'Bootstrapping'. Bootstraping ensures that we are not using the same data for every tree, so it helps our model to be less sensitive to the original dataset.
+- 'Random feature selection'. helps to reduce the correlation between the trees.if we use every feautre then most of our trees will have the same decision nodes and they will act very similiarly.
+<img src=''>
 
+2. creating the decision tree each of the new dataset.
+in this case we have 4 new dataset that generated using the Bootstrapping method. and each of the dataset contain different features. Create the decision tree each of this dataset and the result will look like this:<br>
+<img src=''>
+
+3. Predicting some values.
+after we build each of the decision tree, lets take a test data for our model. In this case we are gonna use 2.8, 6.2, 4.3, 5.3, 5.5. this data will be tested in 4 different decision tree models and generated the output between one and zero (binary classification problem) which: 1, 0, 1, 1. From this output we will take the majority vote which is predicted as 1. The process of combining result between different decision tree models is called 'aggregation'. 
