@@ -7,7 +7,6 @@ These classifiers are called 'Naive' because they assume that features are condi
 2. Multinomial: discrete features (e.g. word counts)
 3. Gaussian: continuous/real-valued features
 
-### Gaussian Naive Bayes
 How it Works:<br>
 <img src='https://2.bp.blogspot.com/-sD_VfJzi8YY/WtTygMEGRCI/AAAAAAAABwA/mnnX-Q14j3kRoFzbygUrhgDS_DQwSemZQCLcBGAs/s640/Decision%2BTree%2BExercise.jpg'><br>
 The dataset is divided into two parts, feature matrix and the response vector.
@@ -29,6 +28,23 @@ These numbers can be converted into a probability by making the sum equal to 1 (
 P(YES | today ) = 0.00141 / (0.0141 + 0.0068) = 0.67
 P(NO | today) = 0.0068 / (0.0068 + 0.0141) = 0.33
 
+### Gaussian Naive Bayes
+This Dataset is used for the example of how gaussian naive bayers works, contain 7 data from cancer class
+and 7 data from healthy class, with 1 feature is PSA.
+<img src=''><br>
+
+for the Gaussian Concept, we need to calculate the mean of some feature in class, and its standart deviation.
+for cancer we got std=0.82 and the mean=2.8, for healthy class we got std=0.61 and mean=1.5<br>
+<img src=''><br>
+
+After we got the std and the mean of each class, we can calculate the f(x) of PSA feature that we want to predict. for this example we use PSA = 2.6<br>
+<img src=''><br>
+
+Do not forget to calculate the probability of cancer and healthy in the dataset. in this case we have 7 cancer and 7 healthy dataset which made the p(Cancer) and the p(Healthy) are 0.5<br>
+<img src=''><br>
+
+then count the probability where the PSA = 2.6, in this case we got 79% chance diagnosed as Cancer and its about 21% chance healthy when the PSA = 2.6<br>
+<img src=''><br>
 
 
 
