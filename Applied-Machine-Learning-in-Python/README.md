@@ -1,2 +1,2 @@
 # Applied Machine Learning in Python Certificate
-<img src='https://coursera.org/share/aabaf493cd03b77b22f90fc1901fb583'>
+<img src='https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~ZWWVQR6CNBVV/CERTIFICATE_LANDING_PAGE~ZWWVQR6CNBVV.jpeg'>
