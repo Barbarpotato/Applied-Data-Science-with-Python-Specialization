@@ -73,3 +73,30 @@ The weak learners are fit in such a way that each new learner fits into the resi
 # Multi Layer Perceptron
 <img src="https://github.com/Barbarpotato/Applied-Data-Science-with-Python-Specialization/blob/main/Applied-Machine-Learning-in-Python/Supervised-Machine-Learning-Part-2/images/Multi-layer-perceptron.png">
 A multilayer perceptron (MLP) is a fully connected class of feedforward artificial neural network (ANN). An MLP consists of at least three layers of nodes: an input layer, a hidden layer and an output layer. Except for the input nodes, each node is a neuron that uses a nonlinear activation function. MLP utilizes a supervised learning technique called backpropagation for training.
+
+# Data Leakage
+Data leakage can cause you to create overly optimistic if not completely invalid predictive models. Data leakage is when information from outside the training dataset is used to create the model. This additional information can allow the model to learn or know something that it otherwise would not know and in turn invalidate the estimated performance of the mode being constructed.
+### Detecting Data Leakage
+* Before Building the model
+    - Exploratory data analysis to find surprises in the data.
+    - Are there features very highly correlated with the target value?
+
+* After Building the model
+    - Look for surprising feature behavior in the fitted model.
+    - Are there features with very high weights, or high information gain?
+
+* Limited real-world deployment of the trained model
+    - Potentially expensive in terms of development time, but more realistic.
+    - is the trained model generalizing well to new a data?
+
+### Minimizing Data Leakage
+* Perform data preparation within each cross-validation fold seperately
+    - Scale/Normalize data, perform feature selection,etc. within each fold seperately, not using the entire dataset.
+    - For any such parameters estimated on the training data, you must use those same parameters to prepare data on the corresponding held-out test fold.
+* With time series data, use a timestamp cut off
+    - the cutoff value is set to the specific time point where prediction is to occur using current and past records.
+    - Using the cutoff time will make sure you are not accessing any data records that were gathered after the prediction time, i.e in the future.
+* Before any work with a new dataset, split off a final test validation dataset
+    - ... if you have enough data.
+    - Use this final test dataseet as the very last step in your validation.
+    - Helps to check the true generalization performance of an trained models. 
